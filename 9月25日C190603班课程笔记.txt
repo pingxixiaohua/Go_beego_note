@@ -1,0 +1,22 @@
+9月25日C190603班课程笔记
+
+1、GET请求的数据解析：
+	① c.Ctx.Input.Query(key):返回的均是字符串
+	② c.GetXXX(key)：可以直接返回相应的数据类型
+
+2、POST请求的数据解析：
+	① form表单：c.Ctx.Request.FormValue(key)：返回的均是字符串
+	② json格式提交：c.Ctx.Request.Body 和 json.Unmarshall，返回的是结构体类型和err
+	③ form表单：c.ParseForm, 结构体字段使用`form:"xx"`标签
+
+3、beego项目的配置项读取：
+	beego框架全局配置对象：beego.AppConfig变量，类型是：beegoAppConfig
+
+	代码：config := beego.AppConfig
+	获取配置项： config.String(key),config.Int(key)。。。
+
+4、数据库链接
+	参数：user，password，ip，port，db_name，charset
+	驱动类型:mysql，引入驱动包
+
+5、_引入连接数据库的init函数的执行
