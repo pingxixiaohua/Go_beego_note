@@ -1,0 +1,104 @@
+11月23日晚3班课堂笔记
+@author：于洪伟
+
+核心：
+① 熟悉Java语法
+② 使用Java语法写一个加密算法
+
+1、Java语法
+规则: .java结尾的文件
+文件的命名：Demo.java  ——> public class Demo{}
+类：class, 一个类代表一个对象
+语法格式：
+package 包名; //包名第一行
+
+import com.alibaba.fastjson.Utils;
+
+public class Demo{
+	//所有的程序(和Demo有关的）均写在花括号之内
+}
+
+class Test{
+	
+}
+
+编译的命令：javac xxx.java
+比如：javac Demo.java -> 生成两个字节码文件Demo.class Test.class
+
+.class文件：java字节码文件, 机器能看懂，人看不懂
+
+执行命令：java Demo 执行
+
+JVM：java virtual machine，加载并执行字节码文件,执行java程序
+	load class文件
+
+2、打印HELLO world
+main函数：java程序的入口
+打印：System.out.println("hello world");
+java分行：;
+
+3、方法的定义声明：
+方法修饰符 返回值类型 方法名(数据类型1 参数名称1,数据类型2 参数名称2 ...参数列表){
+	方法实现
+	return 返回值;
+}
+注意:Java语言中，方法是单返回值。
+
+4、类的封装：属性 + 方法.
+	属性：名词
+	方法：行为，动词
+
+5、java中获取一个实例对象：new
+比如：Demo demo = new Demo();
+Java语言中的，所有的非静态属性，非静态方法均隶属于实例的对象,即必须要通过实例化对象以后，才能通过对象进行调用和访问。
+② 类中静态的属性，静态的方法：java中使用static关键字表示静态
+ 被static修饰的属性或者方法可以通过 列名.属性 或 类名.方法 调用
+
+6、构造方法：在java的类中，如果一个方法的方法名与类名一致，则该方法称之为构造方法。
+构造方法的作用：在对象创建的时候系统会调用该方法, 便于进行初始化.
+
+7、Exception：异常，非正常.
+go: error, 错误处理机制
+Java: 异常处理机制，exception
+开发者要对可能出现异常的代码进行异常处理：
+	① 亲力亲为型：开发者自己处理
+		try{
+			可能出现异常的代码
+		}catch(XXXXException e){
+			//如果是xxx异常的话，该如何处理
+		}finally{
+			//异常处理结束以后,执行
+			//无论异常是否发生，均会执行该代码
+		}
+	② 管我鸟事型：开发者不处理，把可能的异常推给别人处理
+
+8、factory：工厂
+例如：SecretKeyFactory：加密算法工厂类
+工厂类：根据需求可以产生不同类型的实例对象。
+
+9、设计模式：在开发实践中，对一些经典的代码设计和实现，固定下来，供开发者学习和使用。这种经典的设计称之为设计模式, 在Java中，常见的经典的设计模式有23种之多，工厂模式是其中最常用的模式之一。
+
+10、null：空，没有，类别nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

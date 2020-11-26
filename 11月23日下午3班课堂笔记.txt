@@ -1,0 +1,12 @@
+11月23日下午3班课堂笔记
+
+1、rsa [options] <infile> outfile
+  rsa -in in -out out：读取某个文件的输出，输出到另外一个新文件中
+  rsa -in in -pubout：根据私钥生成公钥，并在控制台输出
+  rsa -in in -pubout -out out: 读取私钥文件，生成公钥并写入文件
+
+2、genrsa
+用法：genrsa [args] [numbits]
+
+	genrsa -out filename_diy.pem
+
