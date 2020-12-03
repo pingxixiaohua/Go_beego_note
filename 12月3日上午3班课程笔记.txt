@@ -1,0 +1,32 @@
+12月3日上午3班课程笔记
+@author：于洪伟
+
+1、比特币核心节点配置
+通过配置文件可以对比特币节点进行配置
+名称：新建一个文件,bitcoin.conf
+路径：.bitcoin目录
+
+可选项配置：
+datadir：存放数据的目录, 数据主要包括：所有区块的数据、区块头、UTXO集合
+maxconnections：与其他节点的最大连接数，默认是125
+maxmempool：设置内存交易池最大的占用空间
+rpcuser：访问rpc服务的用户名
+rpcpassword：访问rpc服务的密码
+testnet：指定为测试网络，配置testnet=1，绿色是测试网络，黄色代表主网
+minrelaytxfee：设置接收的最小手续费的交易
+...
+
+比特币核心软件->帮助->命令行选项，可以查看允许配置的选项
+
+2、比特币windows默认的数据和配置路径：
+C盘\用户\用户名\AppData\Roaming\Bitcoin core
+
+包含：
+blocks目录：存放节点从其他节点那同步到的区块数据, 区块数据以.dat的文件格式的形式存储在硬盘上。同时将区块数据拆分到多个dat文件中。
+
+
+3、RPC：远程过程调用，远程指的是跨进程通信
+remote procedure call
+
+4、进程之间的两种通信方式：接口、RPC
+
